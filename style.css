@@ -157,7 +157,7 @@ h4{
     .group-checkout{
         display: flex;
         flex-direction: column;
-        gap: 10vh;
+        gap: 2vh;
     }
 
     h4{
