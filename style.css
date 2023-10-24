@@ -1,26 +1,35 @@
 @import url('https://fonts.googleapis.com/css2? family= Open+Sans & display=swap');
 
+
+
 *{
     font-family: 'Open sans', sans-serif;
+
 }
 
 body{
     margin: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .cabecalho{
     width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
     border-bottom: 1px solid #ccc;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.logo{
-    margin-left: 300px;
+.container{
+    max-width: 1440px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.content-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
 .logo img{
@@ -31,11 +40,12 @@ body{
 .progresso{
     display: flex;
     justify-content: space-evenly;
-    margin: 100px;
 }
 
 .obj-progresso{
-    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 
@@ -69,12 +79,12 @@ span#first{
     font-size: 14px;
 }
 
+main{
+    height: 70vh;
+}
 
 .checkout{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,12 +95,11 @@ span#first{
 }
 
 .group-checkout{
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 200px;
+    gap: 17vw;
     padding: 36px 50px;
 }
 
@@ -124,3 +133,37 @@ h4{
     width: 90px;
 }
 
+
+@media screen and (max-width: 992px) {
+    .content-header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progresso{
+        gap: 25px;
+    }
+
+    .name-progresso{
+        display: none;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .group-checkout{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+    }
+
+    h4{
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
